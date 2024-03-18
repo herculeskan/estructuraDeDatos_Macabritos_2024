@@ -277,21 +277,85 @@ arregloByte = new byte[5]; // Definir un arreglo de bytes
         }
     }
 ```
-Para poder mostrar los arreglos en la consola necesitamos el metodo main en el archivo, en el documento el archivo zip se encontrará comentado, pero en documentación aparecerá normal
-7. Declarar y definir otro arreglo de tipo String en una variable llamada dataStructs, e inicializarlo con los siguientes datos, usando la sintaxis de llaves. 
+> Para poder mostrar los arreglos en la consola necesitamos el metodo main en el archivo, en el documento el archivo zip se encontrará comentado, pero en documentación aparecerá normal
+
+5. Declarar y definir otro arreglo de tipo String en una variable llamada dataStructs, e inicializarlo con los siguientes datos, usando la sintaxis de llaves. 
     1. Lista
     2. Cola
     3. Pilas
     4. Mapas
     5. Conjuntos
-8. Declarar y definir otro arreglo de tipo String en una variable llamada características, con 5 elementos. 
-9.  Ingresar los siguientes datos por teclado:
+  
+```java
+    String[] dataStructs = { "Lista", "Cola", "Pilas", "Mapas", "Conjuntos" };
+```
+6. Declarar y definir otro arreglo de tipo String en una variable llamada características, con 5 elementos.
+```java
+Declarar y definir otro arreglo de tipo String en una variable llamada características, con 5 elementos.
+```
+
+7.  Ingresar los siguientes datos por teclado:
     6. Simples, Circulares y Enlazadas 
     7. Primero en entrar, Primero en Salir. Último en entrar, Primero en salir
     8. Primero en entrar, Último en salir
     9. Parejas de clave y valor
     10. Elementos no repetidos 
+```java
+package com.example.DeclararyDefinirArreglos;
 
+import java.util.Scanner;
+
+public class DyD_7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Select data structure type
+        System.out.println("Seleccione el tipo de estructura de datos (1-3):");
+        System.out.println("1. Simples");
+        System.out.println("2. Circulares");
+        System.out.println("3. Enlazadas");
+        int estructuraTipoDato = scanner.nextInt();
+
+        // Selecciona la estructura y ordena si es aplicable
+        int tipoOrden = 0;
+        if (estructuraTipoDato == 1 || estructuraTipoDato == 2) {
+            System.out.println("Seleccione el tipo de ordenamiento (1-3):");
+            System.out.println("1. Primero en entrar, Primero en Salir (FIFO)");
+            System.out.println("2. Último en entrar, Primero en salir (LIFO)");
+            System.out.println("3. Primero en entrar, Último en salir (FILO)");
+            tipoOrden = scanner.nextInt();
+        }
+
+        // Estructura clave-valor si esta aplicada
+        int estructuraClaveValor = 0;
+        if (estructuraTipoDato == 3) {
+            System.out.println("Seleccione la estructura para pares clave-valor (1-2):");
+            System.out.println("1. Diccionario");
+            System.out.println("2. Tabla hash");
+            estructuraClaveValor = scanner.nextInt();
+        }
+
+        // Estructuras no repetidas
+        System.out.println("Seleccione la estructura para elementos no repetidos (1-2):");
+        System.out.println("1. Conjunto");
+        System.out.println("2. Lista ordenada");
+        int estructuraNoRepetida = scanner.nextInt();
+
+        // Resultado que se meustra en pantalla
+        System.out.println("\nResultados:");
+        System.out.println("Tipo de estructura de datos: " + estructuraTipoDato);
+        if (estructuraTipoDato == 1 || estructuraTipoDato == 2) {
+            System.out.println("Tipo de ordenamiento: " + tipoOrden);
+        }
+        if (estructuraTipoDato == 3) {
+            System.out.println("Tipo de estructura para pares clave-valor: " + estructuraClaveValor);
+        }
+        System.out.println("Tipo de estructura para elementos no repetidos: " + estructuraNoRepetida);
+
+        scanner.close();
+    }
+}
+```
 <h4> 2. Manipular los elementos dentro de arreglos:</h4>
 
 
