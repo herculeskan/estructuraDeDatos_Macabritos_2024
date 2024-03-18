@@ -13,10 +13,13 @@
 Universidad de Cartagena 
 
 
-![alt_text](images/image1.png "image_tooltip")
+![Escudo de la UDC](https://w7.pngwing.com/pngs/1014/299/png-transparent-university-of-cartagena-united-states-research-employment-united-states-emblem-label-logo.png)
 
 
 Carlos Esteban Lara Gil
+Diego Andrés Arias Hernandez
+Yeshua Martínez Chavez
+Jeraldo de Jesus Morales Morales
 
 Prof. John Arrieta
 
