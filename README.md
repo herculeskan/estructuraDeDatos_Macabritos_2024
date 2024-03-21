@@ -291,7 +291,8 @@ arregloByte = new byte[5]; // Definir un arreglo de bytes
 ```
 6. Declarar y definir otro arreglo de tipo String en una variable llamada características, con 5 elementos.
 ```java
-Declarar y definir otro arreglo de tipo String en una variable llamada características, con 5 elementos.
+String[] caracteristicas = new String[5];
+
 ```
 
 7.  Ingresar los siguientes datos por teclado:
