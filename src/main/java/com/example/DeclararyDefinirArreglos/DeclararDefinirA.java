@@ -1,6 +1,6 @@
 package com.example.DeclararyDefinirArreglos;
 
-public class DyD_1 {
+public class DeclararDefinirA {
     // Declarar un arreglo por cada uno de los tipos de datos primitivos (byte,
     // Byte, char, Character, short, Short, int, Integer, long, Long, float, Float,
     // double, Double, Object, String.

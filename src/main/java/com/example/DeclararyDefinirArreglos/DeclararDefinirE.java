@@ -1,6 +1,6 @@
 package com.example.DeclararyDefinirArreglos;
 
-public class DyD_5 {
+public class DeclararDefinirE {
     // Declarar y definir otro arreglo de tipo String en una variable llamada
     // dataStructs, e inicializarlo con los siguientes datos, usando la sintaxis de
     // llaves.

@@ -1,14 +1,6 @@
 package com.example.DeclararyDefinirArreglos;
 
-public class DyD_4 {
-    public static void main(String[] args) {
-        // Imprime los valores en consola
-        DyD_4 objeto = new DyD_4();
-        objeto.definirArreglos();
-        objeto.mostrarValores();
-
-    }
-
+public class DeclararDefinirB {
     byte[] arregloByte; // Declarar un arreglo de bytes
     Byte[] arregloByteObjeto; // Declarar un arreglo de objetos Byte
     char[] arregloChar; // Declarar un arreglo de caracteres
@@ -44,57 +36,5 @@ public class DyD_4 {
         arregloDoubleObjeto = new Double[5]; // Definir un arreglo de objetos Double
         arregloObject = new Object[5]; // Definir un arreglo de objetos
         arregloString = new String[5]; // Definir un arreglo de cadenas de texto
-    }
-
-    // Mostrar los valores de cada arreglo en consola
-    public void mostrarValores() {
-        System.out.println("Arreglo de bytes");
-        for (int i = 0; i < arregloByte.length; i++) {
-            System.out.println(arregloByte[i]);
-        }
-        System.out.println("Arreglo de objetos Byte");
-        for (int i = 0; i < arregloByteObjeto.length; i++) {
-            System.out.println(arregloByteObjeto[i]);
-        }
-        System.out.println("Arreglo de caracteres");
-        for (int i = 0; i < arregloChar.length; i++) {
-            System.out.println(arregloChar[i]);
-        }
-        System.out.println("Arreglo de objetos Character");
-        for (int i = 0; i < arregloCharObjeto.length; i++) {
-            System.out.println(arregloCharObjeto[i]);
-        }
-        System.out.println("Arreglo de shorts");
-        for (int i = 0; i < arregloShort.length; i++) {
-            System.out.println(arregloShort[i]);
-        }
-        System.out.println("Arreglo de objetos Short");
-        for (int i = 0; i < arregloShortObjeto.length; i++) {
-            System.out.println(arregloShortObjeto[i]);
-        }
-        System.out.println("Arreglo de enteros");
-        for (int i = 0; i < arregloInt.length; i++) {
-            System.out.println(arregloInt[i]);
-        }
-        System.out.println("Arreglo de objetos Integer");
-        for (int i = 0; i < arregloIntObjeto.length; i++) {
-            System.out.println(arregloIntObjeto[i]);
-        }
-        System.out.println("Arreglo de longs");
-        for (int i = 0; i < arregloLong.length; i++) {
-            System.out.println(arregloLong[i]);
-        }
-        System.out.println("Arreglo de objetos Long");
-        for (int i = 0; i < arregloLongObjeto.length; i++) {
-            System.out.println(arregloLongObjeto[i]);
-        }
-        System.out.println("Arreglo de floats");
-        for (int i = 0; i < arregloFloat.length; i++) {
-            System.out.println(arregloFloat[i]);
-        }
-        System.out.println("Arreglo de objetos Float");
-        for (int i = 0; i < arregloFloatObjeto.length; i++) {
-            System.out.println(arregloFloatObjeto[i]);
-        }
     }
 }

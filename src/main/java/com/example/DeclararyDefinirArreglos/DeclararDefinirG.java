@@ -2,7 +2,7 @@ package com.example.DeclararyDefinirArreglos;
 
 import java.util.Scanner;
 
-public class DyD_7 {
+public class DeclararDefinirG {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

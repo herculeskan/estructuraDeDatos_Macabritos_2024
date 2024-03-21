@@ -1,6 +1,6 @@
 package com.example.DeclararyDefinirArreglos;
 
-public class DyD_3 {
+public class DeclararDefinirC {
 
     byte[] arregloByte; // Declarar un arreglo de bytes
     Byte[] arregloByteObjeto; // Declarar un arreglo de objetos Byte
