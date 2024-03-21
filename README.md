@@ -362,19 +362,90 @@ public class DyD_7 {
 
 
 
-1. Mostrar los elementos del arreglo _dataStructs_ con su equivalente elemento del arreglo características.
-2. Declarar un arreglo de enteros en una variable llamada ventas
-3. Inicializar el arreglo ventas con una cantidad aleatoria de elementos. 
-4. Llenar el arreglo ventas con valores aleatorios entre 1 y 1000
+a. Mostrar los elementos del arreglo _dataStructs_ con su equivalente elemento del arreglo características.
+   ```java
+    public static void main(String[] args) {
+        // Arreglo de dataStrucs
+        String[] dataStructs = { "Arreglo", "Lista", "Pila", "Cola", "Árbol", "Grafo" };
+        // Las características de cada estructura de datos
+        String[] caracteristicas = { "Estático", "Dinámico", "LIFO", "FIFO", "Jerárquico", "No lineal" };
+        // Revisa si ambos arreglos tienen la misma longitud
+        if (dataStructs.length != caracteristicas.length) {
+            System.out.println("Los arreglos no tienen la misma longitud");
+            return;
+        }
+        // Imprimir elementos de ambos arreglos
+        for (int i = 0; i < dataStructs.length; i++) {
+            System.out.println(dataStructs[i] + " es " + caracteristicas[i]);
+        }
+    }
+   ```
+b. Declarar un arreglo de enteros en una variable llamada ventas
+```java
+int[] ventas;
+```
 
- 
+c. Inicializar el arreglo ventas con una cantidad aleatoria de elementos. 
+```java
+// Importamos la clase Random
+import java.util.Random;
+
+public class ManipularElementosC {
+
+        // Se crea el objeto random
+        Random random = new Random();
+        //inicializar ventas con una cantidad aleatoria de elementos
+        int[] ventas = new int[random.nextInt(10)];
+    }
+
+ }
+
+```
+d. Llenar el arreglo ventas con valores aleatorios entre 1 y 1000
+
+ ```java
+// Generar una cantidad aleatoria de elementos. pondré entre 100 a 5000 dolares
+    int cantidad = random.nextInt(100) + 1;
+    int[] ventas = new int[cantidad];
+    for (int i = 0; i < ventas.length; i++) {
+            ventas[i] = random.nextInt(1000) + 1;
+        }
 
 
 
-5. Mostrar la cantidad de ventas
-6. Mostrar el valor de cada una de las ventas
-7. Mostrar el total de ventas
-8. Mostrar el promedio de las ventas. 
+```
+
+
+
+e. Mostrar la cantidad de ventas
+```java
+   System.out.println("Cantidad de ventas: " + ventas.length);
+```
+f. Mostrar el valor de cada una de las ventas
+```java
+for (int i = 0; i < ventas.length; i++) {
+            ventas[i] = random.nextInt(1000) + 1;
+            //Imprimir los valores de cada venta
+            System.out.println("venta # " + (i + 1) + ": " + ventas[i]);
+        }
+```
+g. Mostrar el total de ventas
+```java
+// imprimir el total de ventas
+        System.out.println("Total de ventas: " + ventas.length);
+        // Suma de cada una de las ventas
+        int suma = 0;
+        for (int i = 0; i < ventas.length; i++) {
+            suma += ventas[i];
+        }
+        System.out.println("Suma de ventas: " + suma);
+
+```
+h. Mostrar el promedio de las ventas. 
+```java
+
+        System.out.println("Promedio de ventas: " + (suma / ventas.length));
+```
 
 <h4>3. Buscar elementos en un arreglo:</h4>
 
