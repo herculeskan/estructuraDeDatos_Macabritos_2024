@@ -2,6 +2,19 @@ package com.example.ManipularElementos;
 
 import java.util.Random;
 
+/*// - Importar venta más alta 
+import com.example.BuscarElementos.BuscarElementosA;
+// Importar venta más baja
+import com.example.BuscarElementos.BuscarElementosB;
+// Importar total de ventas
+import com.example.BuscarElementos.BuscarElementosC;
+ // Importar promedio de ventas
+import com.example.BuscarElementos.BuscarElementosD;
+*/
+
+// Importar venta cercana al promedio
+import com.example.BuscarElementos.BuscarElementosE;
+
 public class ManipularElementosH {
     public static void main(String[] args) {
 
@@ -16,17 +29,18 @@ public class ManipularElementosH {
             // Imprimir los valores de cada venta
             System.out.println("venta # " + (i + 1) + ": " + ventas[i]);
         }
-        // imprimir el total de ventas
-        System.out.println("Total de ventas: " + ventas.length);
-        // Suma de cada una de las ventas
-        int suma = 0;
-        for (int i = 0; i < ventas.length; i++) {
-            suma += ventas[i];
-        }
-        System.out.println("Suma de ventas: " + suma);
-
-        // Imprimir el promedio de las ventas
-        System.out.println("Promedio de ventas: " + (suma / ventas.length));
-
+        /*
+         * // imprimir el total de ventas
+         * BuscarElementosA.buscarVentaMasAlta(ventas);
+         *
+         * // Imprimir la venta más baja
+         * BuscarElementosB.buscarVentaMasBaja(ventas);
+         * // Imprimir el total de ventas
+         * BuscarElementosC.obtenerTotalVentas(ventas);
+         * BuscarElementosD.obtenerPromedioVentas(ventas);
+         * 
+         * // Buscar elementos cercano al promedio
+         * BuscarElementosE.obtenerVentaCercanaPromedio(ventas);
+         */
     }
 }
