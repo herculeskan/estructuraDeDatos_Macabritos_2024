@@ -528,9 +528,81 @@ e. Diseñar una función que devuelva la venta cuyo valor se acerque más al val
 #### 4. Ordenar arreglos
 
 1.  Diseñar una función que permita ordenar las ventas de forma descendente e invocar la función para probarla.
+
+```java
+    public static void ordenarVentasDescendente(int[] ventas) {
+        for (int i = 0; i < ventas.length - 1; i++) {
+            for (int j = i + 1; j < ventas.length; j++) {
+                if (ventas[i] < ventas[j]) {
+                    int aux = ventas[i];
+                    ventas[i] = ventas[j];
+                    ventas[j] = aux;
+                }
+            }
+        }
+        System.out.println("Ventas ordenadas de forma descendente:");
+        for (int i = 0; i < ventas.length; i++) {
+            System.out.println(ventas[i]);
+        }
+    }
+```
+
 2.  Diseñar una función que permita ordenamiento que permita ordenar las ventas de forma ascendente e invocar la función para probarla.
+
+```java
+public static void ordenarVentasAscendente(int[] ventas) {
+        for (int i = 0; i < ventas.length - 1; i++) {
+            for (int j = i + 1; j < ventas.length; j++) {
+                if (ventas[i] > ventas[j]) {
+                    int aux = ventas[i];
+                    ventas[i] = ventas[j];
+                    ventas[j] = aux;
+                }
+            }
+        }
+        System.out.println("Ventas ordenadas de forma ascendente:");
+        for (int i = 0; i < ventas.length; i++) {
+            System.out.println(ventas[i]);
+        }
+    }
+```
+
 3.  Diseñar una función que permite desordenar las ventas e invocar la función para probarla.
+
+```java
+public static void desordenarVentas(int[] ventas) {
+        for (int i = 0; i < ventas.length - 1; i++) {
+            int j = (int) (Math.random() * ventas.length);
+            int aux = ventas[i];
+            ventas[i] = ventas[j];
+            ventas[j] = aux;
+        }
+        System.out.println("Ventas desordenadas:");
+        for (int i = 0; i < ventas.length; i++) {
+            System.out.println(ventas[i]);
+        }
+    }
+```
+
 4.  Diseñar una función que permita ordenar las ventas primero las partes y luego en impares e invocar la función para probarla
+
+```java
+    public static void ordenarVentasPartesImpares(int[] ventas) {
+        for (int i = 0; i < ventas.length - 1; i++) {
+            for (int j = i + 1; j < ventas.length; j++) {
+                if (ventas[i] % 2 == 0 && ventas[j] % 2 != 0) {
+                    int aux = ventas[i];
+                    ventas[i] = ventas[j];
+                    ventas[j] = aux;
+                }
+            }
+        }
+        System.out.println("Ventas ordenadas primero las partes y luego las impares:");
+        for (int i = 0; i < ventas.length; i++) {
+            System.out.println(ventas[i]);
+        }
+    }
+```
 
 #### 5. Trabajar con Matrices (tablas o arreglos multidimensionales)
 
