@@ -606,17 +606,181 @@ public static void desordenarVentas(int[] ventas) {
 
 #### 5. Trabajar con Matrices (tablas o arreglos multidimensionales)
 
-1. Declarar e inicializar una matriz de 5 x 8 de tipo Object en una variable llamada lenguajes
-2. A la primera línea de la matriz lenguajes se debe asignar los siguientes valores en ese orden: [NOMBRE, AÑO, AUTOR, DETALLES, FRAMEWORKS]
+a. Declarar e inicializar una matriz de 5 x 8 de tipo Object en una variable llamada lenguajes
+
+```java
+public static void declararMatriz() {
+        Object[][] lenguajes = { { "Java", 1, "Oracle" }, { "Python", 2, "Guido van Rossum" },
+                { "JavaScript", 3, "Netscape" }, { "C", 4, "Dennis Ritchie" }, { "PHP", 5, "Rasmus Lerdorf" } };
+        System.out.println("Matriz de lenguajes:");
+        for (int i = 0; i < lenguajes.length; i++) {
+            for (int j = 0; j < lenguajes[i].length; j++) {
+                System.out.print(lenguajes[i][j] + " ");
+            }
+            System.out.println();
+
+    }
+```
+
+b. A la primera línea de la matriz lenguajes se debe asignar los siguientes valores en ese orden: [NOMBRE, AÑO, AUTOR, DETALLES, FRAMEWORK`]
+
+```java
+    public static void asignarValores() {
+        Object[][] lenguajes = new Object[5][5];
+        lenguajes[0] = new Object[] { "Java", 1995, "Oracle", "Lenguaje de programación orientado a objetos",
+                "Spring, Hibernate" };
+        lenguajes[1] = new Object[] { "Python", 1991, "Guido van Rossum", "Lenguaje de programación interpretado",
+                "Django, Flask" };
+        lenguajes[2] = new Object[] { "JavaScript", 1995, "Netscape", "Lenguaje de programación interpretado",
+                "React, Angular" };
+        lenguajes[3] = new Object[] { "C", 1972, "Dennis Ritchie", "Lenguaje de programación estructurado",
+                "Ninguno" };
+        lenguajes[4] = new Object[] { "PHP", 1995, "Rasmus Lerdorf", "Lenguaje de programación interpretado",
+                "Laravel, Symfony" };
+        System.out.println("Matriz de lenguajes:");
+        for (int i = 0; i < lenguajes.length; i++) {
+            for (int j = 0; j < lenguajes[i].length; j++) {
+                System.out.print(lenguajes[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
 3. Realizar una función llamada _infoLenguajes_ que permita llenar la matriz lenguajes con datos por teclado a partir de la segunda fila.
-4. Realizar una función que reciba como parámetro el nombre de un lenguaje y retorna verdadero si este se encuentra dentro de la matriz lenguajes, de lo contrario retorna falso.
-5. Realizar una función que reciba como parámetro el nombre de un lenguaje y retorna las coordenadas (fila, columna) si este se encuentra encuentra dentro de la matriz lenguajes, de lo contrario retorna null.
-6. Realizar una función que reciba como parámetro una fila y retorne el registro completo (datos en la fila) del lenguaje en esa fila. Si la fila está errada (no existe en la matriz lenguajes) entonces, debe retornar una excepción con un mensaje informando el problema
-7. Realizar una función que reciba como parámetro una columna y retorne un todos los datos en esa columna. Si la columna está errada (no existe en la matriz lenguajes) entonces, debe retornar una excepción con un mensaje informando el problema.
-8. Realizar una función que reciba como parámetro las coordenadas (fila, columna) y retorne el valor en esa coordinada y el registro (fila) completo con ojos datos de ese lenguaje, si las coordinadas son erradas (no existen en la matriz lenguajes) entonces, debe retornar una excepción con un mensaje informando el problema.
-9. lenguaje y retorna las coordenadas (fila, columna) si este se encuentra dentro de la matriz lenguajes, de lo contrario retorna null.
-10. Realizar una función que permita mostrar los datos de la matriz lenguajes según la siguiente logia:
-    1. La función de debe recibir como parámetro un arreglo con 5 elementos de tipo boolean
-    2. Al invocar la función se debe mostrar solo la información de la matriz lenguajes de acuerdo al valor (false o true) que tenga el arreglo que recibe como parámetro. Por ejemplo:
+
+```java
+    public static void infoLenguajes() {
+        Object[][] lenguajes = new Object[5][5];
+        lenguajes[0] = new Object[] { "Java", 1995, "Oracle", "Lenguaje de programación orientado a objetos",
+                "Spring, Hibernate" };
+        System.out.println("Matriz de lenguajes:");
+        for (int i = 0; i < lenguajes.length; i++) {
+            for (int j = 0; j < lenguajes[i].length; j++) {
+                System.out.print(lenguajes[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+```
+
+d. Realizar una función que reciba como parámetro el nombre de un lenguaje y retorna verdadero si este se encuentra dentro de la matriz lenguajes, de lo contrario retorna falso.
+
+```java
+public static boolean buscarLenguaje(String nombreLenguaje) {
+        Object[][] lenguajes = new Object[5][5];
+        lenguajes[0] = new Object[] { "Java", 1995, "Oracle", "Lenguaje de programación orientado a objetos",
+                "Spring, Hibernate" };
+        lenguajes[1] = new Object[] { "Python", 1991, "Guido van Rossum", "Lenguaje de programación interpretado",
+                "Django, Flask" };
+        lenguajes[2] = new Object[] { "JavaScript", 1995, "Netscape", "Lenguaje de programación interpretado",
+                "React, Angular" };
+        lenguajes[3] = new Object[] { "C", 1972, "Dennis Ritchie", "Lenguaje de programación estructurado", "Ninguno" };
+        lenguajes[4] = new Object[] { "PHP", 1995, "Rasmus Lerdorf", "Lenguaje de programación interpretado",
+                "Laravel, Symfony" };
+        for (int i = 0; i < lenguajes.length; i++) {
+            if (lenguajes[i][0].equals(nombreLenguaje)) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+```
+
+e. Realizar una función que reciba como parámetro el nombre de un lenguaje y retorna las coordenadas (fila, columna) si este se encuentra encuentra dentro de la matriz lenguajes, de lo contrario retorna null.
+
+```java
+public static int[] buscarLenguaje(String nombreLenguaje) {
+        Object[][] lenguajes = new Object[5][5];
+        lenguajes[0] = new Object[] { "Java", 1995, "Oracle", "Lenguaje de programación orientado a objetos",
+                "Spring, Hibernate" };
+        lenguajes[1] = new Object[] { "Python", 1991, "Guido van Rossum", "Lenguaje de programación interpretado",
+                "Django, Flask" };
+        lenguajes[2] = new Object[] { "JavaScript", 1995, "Netscape", "Lenguaje de programación interpretado",
+                "React, Angular" };
+        lenguajes[3] = new Object[] { "C", 1972, "Dennis Ritchie", "Lenguaje de programación estructurado", "Ninguno" };
+        lenguajes[4] = new Object[] { "PHP", 1995, "Rasmus Lerdorf", "Lenguaje de programación interpretado",
+                "Laravel, Symfony" };
+        for (int i = 0; i < lenguajes.length; i++) {
+            if (lenguajes[i][0].equals(nombreLenguaje)) {
+                return new int[] { i, 0 };
+            }
+        }
+        return null;
+    }
+```
+
+f. Realizar una función que reciba como parámetro una fila y retorne el registro completo (datos en la fila) del lenguaje en esa fila. Si la fila está errada (no existe en la matriz lenguajes) entonces, debe retornar una excepción con un mensaje informando el problema
+
+```java
+    public static Object[] buscarLenguaje(int fila) {
+        Object[][] lenguajes = new Object[5][5];
+        lenguajes[0] = new Object[] { "Java", 1995, "Oracle", "Lenguaje de programación orientado a objetos",
+                "Spring, Hibernate" };
+        lenguajes[1] = new Object[] { "Python", 1991, "Guido van Rossum", "Lenguaje de programación interpretado",
+                "Django, Flask" };
+        lenguajes[2] = new Object[] { "JavaScript", 1995, "Netscape", "Lenguaje de programación interpretado",
+                "React, Angular" };
+        lenguajes[3] = new Object[] { "C", 1972, "Dennis Ritchie", "Lenguaje de programación estructurado", "Ninguno" };
+        lenguajes[4] = new Object[] { "PHP", 1995, "Rasmus Lerdorf", "Lenguaje de programación interpretado",
+                "Laravel, Symfony" };
+        if (fila < 0 || fila >= lenguajes.length) {
+            throw new RuntimeException("La fila no existe en la matriz lenguajes");
+        }
+        return lenguajes[fila];
+    }
+```
+
+g. Realizar una función que reciba como parámetro una columna y retorne un todos los datos en esa columna. Si la columna está errada (no existe en la matriz lenguajes) entonces, debe retornar una excepción con un mensaje informando el problema.
+
+```java
+    public static Object[] buscarColumna(int columna) {
+        Object[][] lenguajes = new Object[5][5];
+        lenguajes[0] = new Object[] { "Java", 1995, "Oracle", "Lenguaje de programación orientado a objetos",
+                "Spring, Hibernate" };
+        lenguajes[1] = new Object[] { "Python", 1991, "Guido van Rossum", "Lenguaje de programación interpretado",
+                "Django, Flask" };
+        lenguajes[2] = new Object[] { "JavaScript", 1995, "Netscape", "Lenguaje de programación interpretado",
+                "React, Angular" };
+        lenguajes[3] = new Object[] { "C", 1972, "Dennis Ritchie", "Lenguaje de programación estructurado", "Ninguno" };
+        lenguajes[4] = new Object[] { "PHP", 1995, "Rasmus Lerdorf", "Lenguaje de programación interpretado",
+                "Laravel, Symfony" };
+        if (columna < 0 || columna >= lenguajes[0].length) {
+            throw new RuntimeException("La columna no existe en la matriz lenguajes");
+        }
+        Object[] datosColumna = new Object[lenguajes.length];
+        for (int i = 0; i < lenguajes.length; i++) {
+            datosColumna[i] = lenguajes[i][columna];
+        }
+        return datosColumna;
+
+```
+
+h. Realizar una función que reciba como parámetro las coordenadas (fila, columna) y retorne el valor en esa coordinada y el registro (fila) completo con ojos datos de ese lenguaje, si las coordinadas son erradas (no existen en la matriz lenguajes) entonces, debe retornar una excepción con un mensaje informando el problema.
+
+```java
+    public static Object[] buscarLenguaje(int fila, int columna) {
+        Object[][] lenguajes = new Object[5][5];
+        lenguajes[0] = new Object[] { "Java", 1995, "Oracle", "Lenguaje de programación orientado a objetos",
+                "Spring, Hibernate" };
+        lenguajes[1] = new Object[] { "Python", 1991, "Guido van Rossum", "Lenguaje de programación interpretado",
+                "Django, Flask" };
+        lenguajes[2] = new Object[] { "JavaScript", 1995, "Netscape", "Lenguaje de programación interpretado",
+                "React, Angular" };
+        lenguajes[3] = new Object[] { "C", 1972, "Dennis Ritchie", "Lenguaje de programación estructurado", "Ninguno" };
+        lenguajes[4] = new Object[] { "PHP", 1995, "Rasmus Lerdorf", "Lenguaje de programación interpretado",
+                "Laravel, Symfony" };
+        if (fila < 0 || fila >= lenguajes.length || columna < 0 || columna >= lenguajes[0].length) {
+            throw new RuntimeException("Las coordenadas no existen en la matriz lenguajes");
+        }
+        return new Object[] { lenguajes[fila][columna], lenguajes[fila] };
+    }
+```
+
+i. lenguaje y retorna las coordenadas (fila, columna) si este se encuentra dentro de la matriz lenguajes, de lo contrario retorna null.
+
+10. Realizar una función que permita mostrar los datos de la matriz lenguajes según la siguiente logia: 1. La función de debe recibir como parámetro un arreglo con 5 elementos de tipo boolean 2. Al invocar la función se debe mostrar solo la información de la matriz lenguajes de acuerdo al valor (false o true) que tenga el arreglo que recibe como parámetro. Por ejemplo:
 
 Debe mostrar los nombres de los lenguajes, los autores, los frameworks
