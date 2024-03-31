@@ -13,12 +13,16 @@ Universidad de Cartagena
 
 ![Escudo de la UDC](https://w7.pngwing.com/pngs/1014/299/png-transparent-university-of-cartagena-united-states-research-employment-united-states-emblem-label-logo.png)
 
-Carlos Esteban Lara Gil
-Diego Andrés Arias Hernandez
-Yeshua Martínez Chavez
-Jeraldo de Jesus Morales Morales
 
-Prof. John Arrieta
+- Carlos Esteban Lara Gil
+- Diego Andrés Arias Hernandez
+- Yeshua Martínez Chavez
+- Jeraldo de Jesus Morales Morales
+- Hawer Morelos Pitalua	
+
+> Todos en Cipas colaboramos para la realización de este documento
+
+*Prof. John Arrieta* 
 
 Cartagena de indias 9 de Marzo
 
